@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Definitions (Blueprints)*>
+<!ELEMENT Blueprints (Blueprint)*>
+<!ELEMENT Blueprint (Id,DisplayName,Icon,Prerequisites,Results,BaseProductionTimeInSeconds)>
+<!ELEMENT Id (TypeId,SubtypeId)>
+<!ELEMENT Prerequisites (Item)*>
+<!ELEMENT Results (Item)*>
+<!ELEMENT TypeId (#PCDATA)>
+<!ELEMENT SubtypeId (#PCDATA)>
+<!ELEMENT DisplayName (#PCDATA)>
+<!ELEMENT Icon (#PCDATA)>
+<!ELEMENT BaseProductionTimeInSeconds (#PCDATA)>
+<!ELEMENT Item EMPTY>
+<!ATTLIST Definitions
+	xmlns:xsi CDATA "http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd CDATA "http://www.w3.org/2001/XMLSchema"
+>
+<!ATTLIST Item
+	Amount    CDATA "0.00"
+	TypeId    CDATA #REQUIRED
+	SubtypeId CDATA #REQUIRED
+>
